@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: your-java-app
-    env: java
-    buildCommand: "./mvnw clean install"
-    startCommand: "java -jar target/projektjedan-0.0.1-SNAPSHOT.jar"
