@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Tickets</title>
+</head>
+<body>
+
+<h1>Number of Tickets Generated:</h1>
+<p id="ticket-count">Loading...</p>
+
+<script>
+
+    const apiEndpoint = 'http://localhost:8080/api/tickets/count';
+
+
+    fetch(apiEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('ticket-count').innerText = data;
+        })
+        .catch(error => {
+            console.error('Error fetching the ticket count:', error);
+            document.getElementById('ticket-count').innerText = 'Error loading data';
+        });
+</script>
+
+</body>
+</html>
