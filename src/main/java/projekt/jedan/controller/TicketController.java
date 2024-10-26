@@ -30,7 +30,8 @@ public class TicketController {
 
             Ticket ticket = ticketService.createTicket(ticketRequest.getVatin(), ticketRequest.getFirstName(), ticketRequest.getLastName());
 
-            String ticketUrl = "http://localhost:8080/ticket.html?id=" + ticket.getId();
+            String ticketUrl = "https://projektweb1-1.onrender.com/ticket.html?id=" + ticket.getId();
+
 
             byte[] qrCode = QRCodeGenerator.generateQRCodeImage(ticketUrl, 250, 250);
 
