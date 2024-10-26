@@ -16,9 +16,10 @@ public class IdHandler implements AuthenticationSuccessHandler {
         String ticketId = (String) request.getSession().getAttribute("ticketId");
 
         if (ticketId != null) {
-            response.sendRedirect("/tickets/ticket/view/" + ticketId);
+            response.sendRedirect("https://projektweb1-1.onrender.com/tickets/ticket/view/" + ticketId);
         } else {
-            response.sendRedirect("/ticket.html");
+            response.sendRedirect("https://projektweb1-1.onrender.com/ticket.html");
         }
     }
+
 }
